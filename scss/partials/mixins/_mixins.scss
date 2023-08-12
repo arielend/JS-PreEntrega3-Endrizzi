@@ -1,0 +1,104 @@
+//DISPLAY FLEX
+
+//DIRECTION ROW
+@mixin flex-start-center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-end-center{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-around-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-evenly-center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+//DIRECTION COLUMN
+@mixin flex-col-start-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-col-end-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-col-around-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-col-between-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-col-evenly-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+//AGREGAR FLEX-WRAP WRAP (Usar con los mixin de Flex)
+@mixin wrap{
+    flex-wrap: wrap;
+}
+
+//CENTRADO DE ELEMENTOS CON POSITION ABSOLUTE
+@mixin abs-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//CENTRADO DE ELEMENTOS CON DISPLAY FLEX
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//CAPA
+@mixin overlay {
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}

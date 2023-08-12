@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Fuentes - Quicksand (Google) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <meta name="description" content="Proyecto Sistema de Turnos creado para el curso de Javascript de Coderhouse. Pagina de registro de usuarios">
+    <meta name="keywords" content="javascript proyecto coderhouse turnos sistema">
+    
+    <!-- Icono -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+
+    <title>Sistema de Turnos | Registro</title>
+</head>
+
+<body>
+
+    <!-- COMIENZO DEL HEADER -->
+    <header class="header">
+
+        <div class="header__banner">
+            <p class="header__banner__p">
+                SISTEMA DE TURNOS
+            </p>
+        </div>        
+
+    </header>
+    <!-- FIN DEL HEADER -->
+
+    <!-- CONTENEDOR DE PÁGINA -->
+    <div class="contenedor wide">
+
+        <!-- Contenido principal de la página (OBLIGATORIO / SOLO UNO) -->
+        <main class="main">
+
+            <!-- Modal pagina registro -->
+            <div class="modal hide" id="modal">
+
+                <div class="modal__box">
+        
+                    <div class="modal__box__header">
+                        <div class="modal__box__header__tittle">
+                            <p class="modal__box__header__tittle__p">MODAL</p>
+                        </div>
+                        <div class="modal__box__header__logo">
+                            <img class="modal__box__header__logo__img" src="../assets/img/doc_icon.svg" alt="">
+                        </div>
+                        <div class="modal__box__header__button">
+                            <!-- Botón de cierre -->
+                            <!-- Inhabilitar boton en caso de ser requeridas ineludiblemented las funciones de los notones del footer -->
+                            <button type="button" id="modal-btn-close">
+                                <img src="../assets/img/btn-close-icon2.svg" alt="">
+                            </button>
+                            </a>
+                        </div>                
+                    </div>
+        
+                    <div class="modal__box__body">
+                        <!-- Titulo: usar para mostrar el tipo de mensaje (Aviso - Alerta - Confirmación)-->
+                        <div class="modal__box__body__tittle" id="modal-body-tittle">MENSAJE</div>
+                        <!-- Mensaje a mostrar -->
+                        <div class="modal__box__body__message" id="modal-body-message">
+                            Aquí dentro se va a mostrar el Mensaje
+                            <!-- Usar innerHTML -->
+                        </div>                
+                    </div>
+        
+                    <div class="modal__box__footer">
+                        <!-- Botones de Confirmación - Reset - Cancelación  -->
+                        <!-- Inhabilitar / Ocultar los botones que no sean necesarios  -->
+                        <button class="modal__box__footer__boton" id="modal-btn-confirm">CONFIRMAR</button>
+                        <button class="modal__box__footer__boton" id="modal-btn-accept">ACEPTAR</button>
+                        <button class="modal__box__footer__boton" id="modal-btn-reset">BORRAR</button>
+                        <button class="modal__box__footer__boton" id="modal-btn-cancel">CANCELAR</button>                
+                    </div>
+                </div>        
+            </div>
+            <!-- /Fin de Modal -->
+
+            <div class="main__register">
+
+                <form action="" class="main__register__form" id="register-form" method="post">
+
+                    <div class="main__register__form__row">
+                        <h1 class="main__register__form__row__banner">
+                            PAGINA DE REGISTRO
+                        </h1>                                                
+                    </div>
+
+                    <div class="main__register__form__row">
+
+                        <div class="main__register__form__row__field campo-apellido">
+                            <label  class="main__register__form__row__field__label" for="register-input-apellido">Apellido: </label>
+                            <input class="main__register__form__row__field__input" type="text" id="register-input-apellido" name="register-input-apellido">
+                        </div>
+
+                        <div class="main__register__form__row__field campo-nombres">
+                            <label class="main__register__form__row__field__label" for="register-input-nombres">Nombres: </label>
+                            <input class="main__register__form__row__field__input" type="text" id="register-input-nombres">
+                        </div>
+                    </div>
+
+                    <div class="main__register__form__row">
+
+                        <div class="main__register__form__row__field campo-documento">
+                            <label class="main__register__form__row__field__label" for="register-input-documento">Documento: </label>
+                            <input class="main__register__form__row__field__input" type="number" id="register-input-documento">
+                        </div>
+
+                        <div class="main__register__form__row__field campo-edad">
+                            <label class="main__register__form__row__field__label" for="register-input-edad">Edad: </label>
+                            <input class="main__register__form__row__field__input" type="number" id="register-input-edad">
+                        </div>
+
+                        <div class="main__register__form__row__field campo-sexo">
+                            <label class="main__register__form__row__field__label" for="register-select-sexo">Sexo: </label>
+                            <select class="main__register__form__row__field__select" name="register-select-sexo" id="register-select-sexo">
+                                <option value="">Seleccione una opción</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Femenino</option>
+                                <option value="X">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="main__register__form__row">
+
+                        <div class="main__register__form__row__field campo-mail">
+                            <label  class="main__register__form__row__field__label" for="register-input-mail">Email: </label>
+                            <input class="main__register__form__row__field__input" type="email" id="register-input-mail" name="register-input-mail">
+                            <span id="alert-mail" class="main__register__form__row__field__alert invisible">
+                                El email no tiene el formato esperado
+                            </span>
+                        </div>
+
+                        <div class="main__register__form__row__field campo-mailConfirm">
+                            <label class="main__register__form__row__field__label" for="register-input-mailConfirm">Confirmar Email: </label>
+                            <input class="main__register__form__row__field__input" type="email" id="register-input-mailConfirm">
+                            <span id="alert-mailConfirm" class="main__register__form__row__field__alert invisible">
+                                Los email no coinciden
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="main__register__form__row">
+
+                        <div class="main__register__form__row__field campo-password">
+                            <a class="main__register__form__row__field__link" id="password-eye-link">
+                                <img class="main__register__form__row__field__link__img" id="password-eye-icon" src="../assets/img/closed-eye.svg" alt="">
+                            </a>
+                            <label class="main__register__form__row__field__label" for="register-input-password">Password: </label>
+                            <input class="main__register__form__row__field__input" type="password" id="register-input-password">
+                            <span id="alert-password" class="main__register__form__row__field__alert">
+                                Fuerza de la contraseña
+                            </span>
+                        </div>
+
+                        <div class="main__register__form__row__field campo-passwordConfirm">
+                            <a class="main__register__form__row__field__link" id="password-eye-link">
+                                <img class="main__register__form__row__field__link__img" id="password-eye-icon" src="../assets/img/closed-eye.svg" alt="">
+                            </a>
+                            <label class="main__register__form__row__field__label" for="register-input-passwordConfirm">Confirmar Password: </label>
+                            <input class="main__register__form__row__field__input" type="password" id="register-input-passwordConfirm">
+                            <span id="alert-passwordConfirm" class="main__register__form__row__field__alert invisible">
+                                Las contraseñas no coinciden
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="main__register__form__row">
+                        
+                        <button class="main__login__form__field__button" id="btn-registrar" type="submit">Registrarse</button>
+
+                        <button class="main__login__form__field__button" id="btn-borrar" type="reset">Borrar</button>
+
+                        <button class="main__login__form__field__button" id="btn-cancelar" type="button">Cancelar</button>
+                        
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+    <!-- FIN DEL CONTENEDOR DE PÁGINA -->
+
+    <!-- COMIENZO DEL PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="footer__line1">Sistema de Turnos</div>
+        <div class="footer__line2">Proyecto Javascript - Coderhouse</div>
+        <div class="footer__line3">Desarrollador: <strong>Ariel Endrizzi</strong> </div>
+
+    </footer>
+    <!-- FIN DEL PIE DE PÁGINA -->
+
+    <!-- Mis Scripts -->
+    <script src="../js/clases.js"></script>
+    <script src="../js/globales.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/registro.js"></script>    
+</body>
+
+</html>

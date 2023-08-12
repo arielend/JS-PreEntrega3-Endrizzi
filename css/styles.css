@@ -1,0 +1,518 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+ol,
+ul,
+dl {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 25rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 19rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 16rem;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12rem;
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.contenedor {
+  width: 90%;
+  height: 75vh;
+  background-color: #78D2DB;
+  margin: 0 auto;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 2rem;
+  background: #78D2DB;
+  color: #000;
+  border: solid 0.15rem #0D7986;
+  border-radius: 1rem;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.showFlex {
+  display: flex !important;
+}
+
+.wide {
+  width: 100%;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.footer {
+  height: 10vh;
+  background-color: #0D7986;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.footer__line1, .footer__line2 {
+  font-size: 1.6rem;
+}
+.footer__line3 {
+  font-size: 1.8rem;
+}
+
+.header {
+  height: 15vh;
+  background-color: #3496A1;
+  display: grid;
+  place-items: center;
+}
+.header__banner {
+  width: 50%;
+  height: 50%;
+}
+.header__banner__p {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+}
+@media screen and (max-width:767px) {
+  .header__banner__p {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width:575px) {
+  .header__banner__p {
+    font-size: 2.5rem;
+  }
+}
+
+@keyframes modal-launch {
+  0% {
+    top: 55%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+.modal {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(9, 80, 111, 0.3647058824);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.modal__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  box-shadow: 0rem 0rem 2.5rem 1rem #0D7986;
+  animation: modal-launch 0.2s ease-in forwards;
+}
+.modal__box__header, .modal__box__body, .modal__box__footer {
+  padding: 1rem;
+}
+.modal__box__header {
+  background-color: #51B1BB;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+}
+.modal__box__header__tittle {
+  width: 30%;
+  height: 100%;
+  align-self: flex-start;
+}
+.modal__box__header__tittle__p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modal__box__header__logo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__box__header__logo__img {
+  width: 9rem;
+}
+.modal__box__header__button {
+  width: 30%;
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal__box__header__button button {
+  background-color: transparent;
+  border: none;
+  width: 3rem;
+  border-radius: 1.5rem;
+}
+.modal__box__header__button img {
+  width: 3rem;
+  cursor: pointer;
+}
+.modal__box__body {
+  background-color: #fff;
+  color: #0D7986;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 17rem;
+}
+.modal__box__body__tittle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.modal__box__body__message {
+  font-size: 2.2rem;
+}
+.modal__box__body p {
+  font-size: 2rem;
+  text-align: center;
+}
+.modal__box__footer {
+  background-color: #0D7986;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 6rem;
+}
+.modal__box__footer__boton {
+  background-color: #EAEAEA;
+  width: 25%;
+  min-width: 100px;
+  height: 3.5rem;
+  border: 0.2rem solid #727272;
+  border-radius: 1rem;
+}
+.modal__box__footer__boton:hover {
+  background-color: #727272;
+  border-color: #EAEAEA;
+  color: #FFF;
+  cursor: pointer;
+}
+
+/*PÁGINA PRINCIPAL - FORMULARIO*/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.main__image {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.main__image img {
+  width: 50%;
+}
+.main__login {
+  width: 50%;
+  min-width: 60rem;
+  display: grid;
+  place-items: center;
+}
+.main__login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 60rem;
+  height: 50rem;
+}
+.main__login__form__field {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main__login__form__field__titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: -2rem;
+}
+.main__login__form__field__label {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #000;
+  align-self: flex-start;
+}
+.main__login__form__field__input {
+  background-color: rgba(0, 0, 0, 0.2823529412);
+  color: #fff;
+  font-size: 1.7rem;
+  padding-left: 1rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.main__login__form__field__alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  gap: 1rem;
+  border-top: solid 0.1rem red;
+}
+.main__login__form__field__alert img {
+  height: 2.7rem;
+}
+.main__login__form__field__alert p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: red;
+}
+.main__login__form__field__link {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: relative;
+}
+.main__login__form__field__link__img {
+  height: 2.5rem;
+  position: absolute;
+  top: 3.3rem;
+  left: 13rem;
+}
+.main__login__form__field__link:hover {
+  color: #0D7986;
+}
+.main__login__form__field__button {
+  width: 15rem;
+  height: 3.5rem;
+  background-color: #3496A1;
+  color: #fff;
+  font-size: 1.7rem;
+  border: 0.3rem solid #0D7986;
+  border-radius: 0.7rem;
+}
+.main__login__form__field__button:hover {
+  background-color: #0D7986;
+  border-color: #3496A1;
+  color: #fff;
+}
+
+/*PÁGINA REGISTRO - FORMULARIO*/
+.main__register {
+  width: 80%;
+  padding: 1.3rem;
+  background-color: #51B1BB;
+  border-radius: 1.3rem;
+  display: grid;
+  place-items: center;
+}
+.main__register__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main__register__form__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+}
+.main__register__form__row__banner {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.main__register__form__row__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__register__form__row__field__label {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #000;
+  align-self: flex-start;
+}
+.main__register__form__row__field__input {
+  background-color: rgba(0, 0, 0, 0.2823529412);
+  color: #fff;
+  font-size: 1.7rem;
+  padding-left: 1rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.main__register__form__row__field__select {
+  background-color: rgba(0, 0, 0, 0.2823529412);
+  color: #fff;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.main__register__form__row__field__alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  gap: 1rem;
+  color: transparent;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.main__register__form__row__field__alert img {
+  height: 2.2rem;
+}
+.main__register__form__row__field__alert p {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: rgb(126, 4, 4);
+}
+.main__register__form__row__field__link {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: relative;
+}
+.main__register__form__row__field__link__img {
+  height: 2.5rem;
+  position: absolute;
+  top: 2.2rem;
+  left: 13rem;
+}
+
+.campo-apellido {
+  width: 40%;
+}
+
+.campo-nombres {
+  width: 60%;
+}
+
+.campo-documento {
+  width: 40%;
+}
+
+.campo-edad {
+  width: 30%;
+}
+
+.campo-sexo {
+  width: 30%;
+}
+
+.campo-mail {
+  width: 50%;
+}
+
+.campo-mailConfirm {
+  width: 50%;
+}
+
+.campo-password {
+  width: 50%;
+}
+
+.campo-passwordConfirm {
+  width: 50%;
+}
+
+.pass-weak {
+  border-top: 3px solid red;
+  color: #000;
+}
+
+.pass-medium {
+  border-top: 3px solid goldenrod;
+  color: #000;
+}
+
+.pass-strong {
+  border-top: 3px solid green;
+  color: #000;
+}
+
+#alert-mail, #alert-mailConfirm, #alert-passwordConfirm {
+  color: #000;
+  border-top: 3px solid orange;
+}
+
+/*# sourceMappingURL=styles.css.map */

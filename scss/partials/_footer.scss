@@ -1,0 +1,17 @@
+@import 'mixins/mixins';
+@import 'var/variables.scss';
+
+.footer{
+    height: 10vh;
+    background-color: $color1s2;
+    @include flex-col-center;
+    color: $white;
+
+    &__line1, &__line2{
+        font-size: 1.6rem;
+    }
+
+    &__line3{
+        font-size: 1.8rem;
+    }
+}

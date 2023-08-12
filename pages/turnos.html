@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Fuentes - Quicksand (Google) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <meta name="description" content="Proyecto Sistema de Turnos creado para el curso de Javascript de Coderhouse">
+    <meta name="keywords" content="javascript proyecto coderhouse turnos sistema">
+    
+    <!-- Icono -->
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+
+    <title>Sistema de Turnos | Registro</title>
+</head>
+
+<body>
+
+    <!-- COMIENZO DEL HEADER -->
+    <header class="header">
+
+        <div class="header__banner">
+            <p class="header__banner__p">
+                SISTEMA DE TURNOS
+            </p>
+        </div>        
+
+    </header>
+    <!-- FIN DEL HEADER -->
+
+    <!-- CONTENEDOR DE PÁGINA -->
+    <div class="contenedor wide">
+
+        <!-- Contenido principal de la página (OBLIGATORIO / SOLO UNO) -->
+        <main class="main">
+
+            <div class="main__image">
+                <img src="../assets/img/doc_icon.svg" alt="Logotipo sistema de turnos">
+            </div>
+
+            <div class="main__login">
+
+                <form action="" class="main__login__form">
+
+                    <div class="main__login__form__field">
+                        <div class="main__login__form__field__titulo">
+                            TURNOS
+                        </div>
+                    </div>
+
+                    <div class="main__login__form__field">
+                        <label class="main__login__form__field__label" for="login-input-documento" >Documento: </label>
+                        <input class="main__login__form__field__input" type="text" id="login-input-documento" name="login-input-documento">
+                    </div>
+    
+                    <div class="main__login__form__field">
+                        <label class="main__login__form__field__label" for="login-input-password" >Password: </label>
+                        <input class="main__login__form__field__input" type="password" id="login-input-password" name="login-input-password">
+                        <a class="main__login__form__field__link" id="password-eye-link">
+                            <img class="main__login__form__field__link__img" id="password-eye-icon" src="assets/img/closed-eye.svg" alt="">
+                        </a>
+                    </div>
+    
+                    <div class="main__login__form__field">
+                        <button class="main__login__form__field__button" id="btn-ingresar" type="button">Ingresar</button>
+                    </div>
+    
+                    <div class="main__login__form__field">
+                        <a class="main__login__form__field__link" id="link-registro" href="pages/registro.html">Aún no estoy registrado</a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+    <!-- FIN DEL CONTENEDOR DE PÁGINA -->
+
+    <!-- COMIENZO DEL PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="footer__line1">Sistema de Turnos</div>
+        <div class="footer__line2">Proyecto Javascript - Coderhouse</div>
+        <div class="footer__line3">Desarrollador: <strong>Ariel Endrizzi</strong> </div>
+
+    </footer>
+    <!-- FIN DEL PIE DE PÁGINA -->
+
+    <!-- Otros scripts -->
+    <script src="js/registro.js"></script>
+    
+</body>
+
+</html>

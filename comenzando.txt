@@ -1,0 +1,32 @@
+CONFIGURACIÓN USUARIO DE GIT
+git config --global user.name "<nombre del usuario que está realizando los cambios>" (Para todos los proyectos que se relizarán)
+git config --global user.email "<email del usuario que está realizando los cambios>" (Para todos los proyectos que se relizarán)
+git config --local user.name "<nombre del usuario que está realizando los cambios>" (Solo para el proyeto actual)
+git config --local user.email "<email del usuario que está realizando los cambios>" (Solo para el proyecto actual)
+
+INICIAR GIT en el proyecto
+git init                    -> Iniciar git en el proyecto actual
+git status                  -> Inspeccionar repositorio
+git add .                   -> Añade todos los archivos y carpetas del proyecto
+git commit -m "Comentario"  -> Permite especificar, a modo de comentario, los cambios realizados en el arhivo o proyecto
+
+
+CONECTAR A REPOSITORIO REMOTO
+git remote                  -> Muestra un listado de los repositorios remotos
+git remote add nombreServidorLocal direccionServidorRemoto -> Permite agregar un servidor remoto a un servidor local. De esta forma tendremos un link de nuestro repositorio local con el repositorio remoto
+
+
+
+INICIAR SASS
+1.- Crear carpeta scss
+2.- Dentro de la carpeta crear el archivo styles.scss
+3.- Ejecutar desde prompt o consola los siguientes comandos:
+    npm init                -> Crea el archivo package.json (9 veces enter y luego escribir yes)
+    npm install -g sass     -> Instala sass de manera global para usar en el proyecto
+    sass --watch scss:css   -> Sass observara los cambios en tu archivo scss origen y los escribirá en tu archivo de estilos
+    ctrl + C                -> Detiene la ejecución de sass
+
+
+Uso de @debug y @debug type-of
+@debug $nombreVariable              -> Muestra en la terminal el valor de la variable
+@debug type-of ($nombreVariable)    -> Muestra el tipo de dato de la variable
